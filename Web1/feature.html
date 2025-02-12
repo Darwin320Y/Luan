@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地域特色</title>
+    <link rel="stylesheet" href="feature.css">
+    <script src="feature.js" defer></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="logo">六安文旅</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">首页</a></li>
+                <li><a href="culture.html">人文风景</a></li>
+                <li><a href="feature.html">地域特色</a></li>
+                <li><a href="food.html">美食推荐</a></li>
+                <li><a href="guide.html">旅游攻略</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索内容..." id="searchInput">
+            <button onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="searchResults"></div>
+        </div>
+    </header>
+
+    <!-- 主内容区域 -->
+    <main>
+        <!-- 轮播图部分 -->
+        <section class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/feature1.jpg" alt="传统手工艺">
+                    <div class="carousel-caption">
+                        <h2>霍山连厢舞</h2>
+                        <p>霍山连厢舞，历史悠久，是当地的非物质文化遗产。</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/feature2.jpg" alt="非遗文化">
+                    <div class="carousel-caption">
+                        <h2>六安香片</h2>
+                        <p>六安香片艺术独具特色，展现了当地的文化底蕴。</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/feature3.jpg" alt="传统手工艺">
+                    <div class="carousel-caption">
+                        <h2>大别山竹木雕</h2>
+                        <p>大别山竹木雕工艺精湛，深受游客喜爱。</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev">&#10094;</button>
+            <button class="carousel-control next">&#10095;</button>
+        </section>
+
+        <!-- 博客文章列表 -->
+        <section class="blog-list">
+            <h2>地域特色</h2>
+            <div class="blog-posts-container">
+                <div class="blog-post">
+                    <img src="images/feature1.jpg" alt="六安竹编">
+                    <div class="blog-content">
+                        <h3>霍山连厢舞：足尖上的民俗风华 </h3>
+                        <p class="blog-meta">发布日期：2025-02-11</p>
+                        <p>霍山连厢舞，舞者手持连厢，在明快节奏里，步伐灵动，连厢翻飞，声声脆响中，传递着百姓对生活的热爱，诉说着岁月的烟火故事。</p>
+                        <a href="https://baike.baidu.com/item/%E8%BF%9E%E5%93%8D%E8%88%9E/10771300" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature2.jpg" alt="六安剪纸">
+                    <div class="blog-content">
+                        <h3>六安香片：舌尖上的茶香记忆</h3>
+                        <p class="blog-meta">发布日期：2025-02-10</p>
+                        <p>六安香片，悠悠茶香沁人心脾。沸水冲下，叶片舒展，入口甘醇，在浅酌慢饮间，将六安的山水灵韵、岁月深情，悄然融入每一杯茶汤。 </p>
+                        <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5020454523731259363&sourceFrom=search_a" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature3.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>大别山竹木雕：刀下的岁月凝萃</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>大别山竹木雕，以刀为笔、桃木为纸。匠人精雕细琢，赋予木料灵魂，让古老的故事与民俗在每一道纹理中静静流淌，诉说着岁月的悠长。</p>
+                        <a href="https://baijiahao.baidu.com/s?id=1635026686619271599&wfr=spider&for=pc" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature4.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>金寨剪纸：纸上的民间绮梦</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>金寨剪纸，扎根民间，历史悠久。一把剪刀，一张红纸，经艺人之手，变幻出花鸟鱼虫、民俗故事，在镂空艺术里，尽显生活的质朴与美好。</p>
+                        <a href="https://mp.weixin.qq.com/s?__biz=MzA5MTI1NzY2NQ==&mid=2247697750&idx=1&sn=686bab89157ace9e70120b88272eaac5&chksm=9072ab78a705226e77bad41217981653ad2fb10e964c838497f1db4aa60358af7d82cff02bb8&scene=27" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature5.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>六安篮茶：竹篮中的茶香瑰宝</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>六安篮茶，以竹篮封装，别具特色。其茶叶形如翠玉，冲泡后香气馥郁。浅尝一口，那滋味恰似山中清泉，又似林间微风，满是岁月的悠然与诗意。</p>
+                        <a href="https://mp.weixin.qq.com/s?__biz=MzA4NDUyODExNg==&mid=2650666259&idx=1&sn=e35087115367b114aeb4b3e6e4fd9e4e&chksm=867aceae4fc9a89510636a6074fe94214a1841c1f30709fd7708c29e7566997e0d3a2acee800&scene=27" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+
+
+                <div class="blog-post">
+                    <img src="images/feature6.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>大红袍油纸伞：竹骨纸面上的古韵传承</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>大红袍油纸伞，以竹为骨，纸面绘彩。伞面如诗画，撑开时，似将千年的烟雨江南凝于其上，在岁月流转中，散发着古朴又迷人的韵味。</p>
+                        <a href="https://baijiahao.baidu.com/s?id=1756489288117164749&wfr=spider&for=pc" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature7.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>霍邱柳编：指尖下的篮艺传奇</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>霍邱柳编，以柳条编篮独具匠心。篮身造型精美，纹理细腻。每只篮子都编织着劳动人民的智慧，承载着田园生活的悠然与质朴。</p>
+                        <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4932858206337839582&sourceFrom=search_a" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature8.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>临淮泥塑：泥土上的指尖技艺</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>临淮泥塑，以细腻泥土塑形，造型古朴生动。经艺人雕琢，泥土幻化成鲜活形象，每一尊都诉说着当地的民俗风情，满是人间烟火气。</p>
+                        <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4891665376883084433&sourceFrom=search_a" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature9.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>徐集花生糖：舌尖上的甜蜜传承</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>徐集花生糖，是徐集的特色美食。精选花生，熬制的糖体香甜酥脆。每一口，都融合着花生的醇厚与糖的甜蜜，满是儿时的温暖回忆。</p>
+                        <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4890390827978964650&sourceFrom=search_a" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+                <div class="blog-post">
+                    <img src="images/feature10.jpg" alt="六安陶艺">
+                    <div class="blog-content">
+                        <h3>六安紫金砚：石上的古韵雅器</h3>
+                        <p class="blog-meta">发布日期：2025-02-09</p>
+                        <p>六安紫金砚，取材独特，石质温润细腻。经匠人雕琢，一方方砚台古朴典雅。墨香晕染间，似能触摸到历史脉络，尽显文化的深邃魅力。</p>
+                        <a href="http://www.anhuify.net/Page/Content?ContentId=1223" class="read-more">阅读更多</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 分页按钮 -->
+            <div class="pagination">
+                <button onclick="changePage(1)">1</button>
+                <button onclick="changePage(2)">2</button>
+                <button onclick="changePage(3)">3</button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 底部功能区 -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.example.com/about">关于我们</a>
+            <a href="https://www.example.com/contact">联系我们</a>
+            <a href="https://www.example.com/privacy">隐私政策</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.weibo.com">微博</a>
+            <a href="https://www.wechat.com">微信</a>
+            <a href="https://www.instagram.com">Instagram</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="输入您的邮箱">
+            <button onclick="window.location.href='https://www.example.com/subscribe'">订阅</button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

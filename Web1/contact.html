@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js" defer></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="logo">六安文旅</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">首页</a></li>
+                <li><a href="culture.html">人文风景</a></li>
+                <li><a href="feature.html">地域特色</a></li>
+                <li><a href="food.html">美食推荐</a></li>
+                <li><a href="guide.html">旅游攻略</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索内容..." id="searchInput">
+            <button onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="searchResults"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <!-- 左上方联系信息 -->
+            <div class="contact-info">
+                <h2>联系我们</h2>
+                <div class="info-item">
+                    <span class="label">地址：</span>
+                    <span class="value">安徽省六安市金安区皖西大道</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">电话：</span>
+                    <span class="value">0564-12345678</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">邮箱：</span>
+                    <a href="mailto:info@luan.com" class="value">info@luan.com</a>
+                </div>
+            </div>
+
+            <!-- 右上方二维码 -->
+            <div class="qrcode-section">
+                <img src="images/qrcode.jpg" alt="公众号二维码" class="qrcode-img">
+                <p>扫码关注官方公众号</p>
+            </div>
+        </div>
+
+        <!-- 下方地图区域 -->
+        <div class="map-container">
+            <h2>我们的位置</h2>
+            <img src="images/map.jpg" alt="位置地图" class="map-image">
+        </div>
+    </main>
+
+    <!-- 底部功能区 -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.example.com/about">关于我们</a>
+            <a href="https://www.example.com/contact">联系我们</a>
+            <a href="https://www.example.com/privacy">隐私政策</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.weibo.com">微博</a>
+            <a href="https://www.wechat.com">微信</a>
+            <a href="https://www.instagram.com">Instagram</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="输入您的邮箱">
+            <button onclick="window.location.href='https://www.example.com/subscribe'">订阅</button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

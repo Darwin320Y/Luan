@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美丽六安首页</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="logo">六安文旅</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">首页</a></li>
+                <li><a href="culture.html">人文风景</a></li>
+                <li><a href="feature.html">地域特色</a></li>
+                <li><a href="food.html">美食推荐</a></li>
+                <li><a href="guide.html">旅游攻略</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索内容..." id="searchInput">
+            <button onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="searchResults"></div>
+        </div>
+    </header>
+
+
+    <!-- 头部大图轮播 -->
+    <section class="hero">
+        <div class="slides">
+            <img src="images/slide1.jpg" alt="家乡风景1">
+            <img src="images/slide2.jpg" alt="家乡风景2">
+            <img src="images/slide3.jpg" alt="家乡风景3">
+        </div>
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+    </section>
+
+    <!-- 家乡简介 -->
+    <section class="introduction">
+        <div class="intro-container">
+            <div class="video-container">
+                <video autoplay muted loop>
+                    <source src="hometown.mp4" type="video/mp4">
+                    您的浏览器不支持视频播放。
+                </video>
+            </div>
+            <div class="text-container">
+                <h1 class="description">欢迎来到六安</h1>
+                <p class="description">六安，这座镶嵌在安徽省西部大别山北麓的璀璨明珠，这里是一个充满人文历史和自然美景的地方，拥有丰富的文化遗产和独特的地域特色。六安之名始于汉武帝时期，取衡山国六县安丰等县首字叠横山国为六安国，寓意六地平安。</p>
+                <div class="travel-guide">
+                    <h2>旅游攻略</h2>
+                    <div class="guide-content">
+                        <p>为您提供详细的旅游路线和实用信息。</p>
+                        <a href="https://www.example.com/guide" download>下载攻略</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色板块展示 -->
+    <section class="features">
+        <div class="feature-card" id="culture">
+            <a href="culture.html">
+                <img src="images/culture.jpg" alt="人文风景">
+                <h2>人文风景</h2>
+                <p>探索六安的历史建筑和文化活动。</p>
+            </a>
+        </div>
+        <div class="feature-card" id="features">
+            <a href="feature.html">
+                <img src="images/features.jpg" alt="地域特色">
+                <h2>地域特色</h2>
+                <p>了解六安的独特文化和传统手工艺。</p>
+            </a>
+        </div>
+        <div class="feature-card" id="food">
+            <a href="food.html">
+                <img src="images/food.jpg" alt="美食推荐">
+                <h2>美食推荐</h2>
+                <p>品尝六安的特色美食和地道小吃。</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 旅游攻略 -->
+
+
+    <!-- 用户互动区 -->
+    <section class="interactive">
+        <h2>用户互动</h2>
+        <div class="comments">
+            <h3>游客评价</h3>
+            <div id="comment-list">
+                <!-- 评论内容由PHP动态生成 -->
+            </div>
+            <form id="comment-form" action="submit_comment.php" method="POST">
+                <textarea name="comment" placeholder="留下您的评论..." required></textarea>
+                <button type="submit">提交</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 侧边导航栏 -->
+    <aside class="side-nav">
+        <div class="side-nav-header">
+            <a href="https://www.news.cn" target="_blank">
+                <img src="images/logo.png" alt="六安文旅" width="100%">
+            </a>
+        </div>
+        <ul class="side-nav-links">
+            <li><a href="https://wlj.luan.gov.cn/wgxgz/tslx/index.html">要闻速递</a></li>
+            <li><a href="https://wlj.luan.gov.cn/wgxgz/whys/index.html">文旅聚焦</a></li>
+            <li><a href="https://wlj.luan.gov.cn/wgxgz/wbfy/index.html">热点专题</a></li>
+            <li><a href="https://wlj.luan.gov.cn/wgxgz/whcy/index.html">旅游视界</a></li>
+            <li><a href="https://wlj.luan.gov.cn/wgxgz/xwcb/index.html">新闻出版</a></li>
+        </ul>
+    </aside>
+
+    <!-- 底部功能区 -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.example.com/about">关于我们</a>
+            <a href="https://www.example.com/contact">联系我们</a>
+            <a href="https://www.example.com/privacy">隐私政策</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.weibo.com">微博</a>
+            <a href="https://www.wechat.com">微信</a>
+            <a href="https://www.instagram.com">Instagram</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="输入您的邮箱">
+            <button onclick="window.location.href='https://www.example.com/subscribe'">订阅</button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

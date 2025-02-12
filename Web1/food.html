@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食推荐</title>
+    <link rel="stylesheet" href="food.css">
+    <script src="food.js" defer></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="logo">六安文旅</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">首页</a></li>
+                <li><a href="culture.html">人文风景</a></li>
+                <li><a href="feature.html">地域特色</a></li>
+                <li><a href="food.html">美食推荐</a></li>
+                <li><a href="guide.html">旅游攻略</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索内容..." id="searchInput">
+            <button onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="searchResults"></div>
+        </div>
+    </header>
+
+
+    <!-- 分类筛选部分 -->
+    <section class="filter-section">
+        <h2>美食分类</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">全部</button>
+            <button class="filter-btn" data-category="tea">茶类</button>
+            <button class="filter-btn" data-category="snack">小吃</button>
+            <button class="filter-btn" data-category="meat">肉类</button>
+        </div>
+    </section>
+
+    <!-- 美食推荐部分 -->
+    <section class="food-gallery">
+        <h2>美食推荐</h2>
+        <div class="food-grid">
+            <div class="food-card" data-name="六安板鸭" data-category="meat">
+                <img src="images/food1.jpg" alt="六安板鸭">
+                <h3>六安板鸭</h3>
+                <p>六安板鸭，历经传统工艺腌制，色泽黄亮、肉质紧致，咸香醇厚，是六安极具风味的特色美食。 </p>
+                <button class="like-btn">喜欢</button>
+                <div class="like-count">♥ 0</div>
+            </div>
+            <div class="food-card" data-name="万佛湖砂锅鱼头" data-category="meat">
+                <img src="images/food2.jpg" alt="万佛湖砂锅鱼头">
+                <h3>万佛湖砂锅鱼头</h3>
+                <p>万佛湖砂锅鱼头，以湖鲜为魂，慢火细炖，乳白汤汁鲜香四溢，鱼肉嫩滑似雪，一口尝尽水乡诗意。 </p>
+                <button class="like-btn">喜欢</button>
+                <div class="like-count">♥ 0</div>
+            </div>
+            <div class="food-card" data-name="金寨吊锅" data-category="meat">
+                <img src="images/food3.jpg" alt="金寨吊锅">
+                <h3>金寨吊锅</h3>
+                <p>金寨吊锅，土灶悬锅煮岁月，食材汇聚满锅香，围坐品尝间，尽是大别山里的质朴与温暖。 </p>
+                <button class="like-btn">喜欢</button>
+                <div class="like-count">♥ 0</div>
+            </div>
+        </div>
+        <button id="load-more" class="load-more-btn">加载更多</button>
+    </section>
+
+    <!-- 用户评论部分 -->
+    <section class="comments-section">
+        <h2>用户评论</h2>
+        <div class="comment-form">
+            <textarea id="comment-input" placeholder="留下你的评论..."></textarea>
+            <button id="submit-comment">提交评论</button>
+        </div>
+        <div class="comments-list">
+            <!-- 评论将动态插入到这里 -->
+        </div>
+    </section>
+
+
+    <!-- 底部功能区 -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.example.com/about">关于我们</a>
+            <a href="https://www.example.com/contact">联系我们</a>
+            <a href="https://www.example.com/privacy">隐私政策</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.weibo.com">微博</a>
+            <a href="https://www.wechat.com">微信</a>
+            <a href="https://www.instagram.com">Instagram</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="输入您的邮箱">
+            <button onclick="window.location.href='https://www.example.com/subscribe'">订阅</button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

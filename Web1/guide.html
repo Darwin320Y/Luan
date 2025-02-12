@@ -1,0 +1,80 @@
+<!-- test.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅游攻略</title>
+    <link rel="stylesheet" href="guide.css">
+    <script src="guide.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">六安文旅</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">首页</a></li>
+                <li><a href="culture.html">人文风景</a></li>
+                <li><a href="feature.html">地域特色</a></li>
+                <li><a href="food.html">美食推荐</a></li>
+                <li><a href="guide.html">旅游攻略</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索内容..." id="searchInput">
+            <button onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="searchResults"></div>
+        </div>
+    </header>
+
+    <section class="travel-blog">
+        <div class="blog-filter">
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">全部攻略</button>
+                <button class="filter-btn" data-filter="budget">经济型</button>
+                <button class="filter-btn" data-filter="luxury">豪华型</button>
+                <button class="filter-btn" data-filter="3days">三日游</button>
+                <button class="filter-btn" data-filter="weekend">周末游</button>
+            </div>
+            <div class="sort-options">
+                <select id="sortSelect">
+                    <option value="newest">最新发布</option>
+                    <option value="popular">人气排行</option>
+                    <option value="budget">预算从低到高</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="blog-grid"></div>
+
+        <div class="pagination">
+            <button class="page-prev"><</button>
+            <div class="page-numbers"></div>
+            <button class="page-next">></button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">隐私政策</a>
+        </div>
+        <div class="social-media">
+            <a href="#">微博</a>
+            <a href="#">微信</a>
+            <a href="#">Instagram</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="输入邮箱订阅">
+            <button>订阅</button>
+        </div>
+    </footer>
+</body>
+</html>

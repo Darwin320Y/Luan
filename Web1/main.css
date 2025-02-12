@@ -1,0 +1,480 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* 修改轮播图容器的样式 */
+.hero {
+    position: relative;
+    height: 600px; /* 增加轮播图高度 */
+    overflow: hidden;
+    margin: 20px; /* 上下左右留白 */
+    border-radius: 10px; /* 边角圆润 */
+}
+
+.hero .slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* 默认隐藏所有图片 */
+    transition: opacity 1s ease; /* 添加淡入淡出效果 */
+    position: absolute; /* 让图片重叠显示 */
+    top: 0;
+    left: 0;
+    border-radius: 10px; /* 图片也需要圆角，以适应容器 */
+}
+
+.hero .slides img.active {
+    opacity: 1; /* 显示当前激活的图片 */
+}
+
+.hero .prev-btn,
+.hero .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hero .prev-btn {
+    left: 10px;
+}
+
+.hero .next-btn {
+    right: 10px;
+}
+
+.hero .explore-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .explore-btn:hover {
+    background-color: #ff8533;
+}
+
+/* 以下为其他部分的样式，保持不变 */
+.introduction {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.intro-container {
+    display: flex;
+    gap: 20px;
+}
+
+.video-container {
+    flex: 1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container .description {
+    margin-right: 190px; /* 根据侧边导航栏的宽度调整 */
+    margin-left: 80px; /* 根据侧边导航栏的宽度调整 */
+}
+
+
+.travel-guide {
+    margin-top: 20px;
+}
+
+.introduction, .features, .interactive {
+    padding: 60px 40px;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.introduction h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.introduction .background-video video {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    gap: 20px;
+}
+
+.feature-card {
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features .feature-card a {
+    text-decoration: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 设置特色板块的字体颜色为黑色 */
+.feature-card h2,
+.feature-card p {
+    color: #000; /* 黑色字体 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+/* 鼠标悬停时，字体颜色变为橙色 */
+.feature-card:hover h2,
+.feature-card:hover p {
+    color: #ff6600; /* 橙色 */
+}
+
+.feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.travel-guide {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff, #f4f4f4);
+}
+
+.travel-guide h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.travel-guide .guide-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.travel-guide .guide-content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.travel-guide .guide-content a:hover {
+    background-color: #ff8533;
+}
+
+.interactive {
+    padding: 40px;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    text-align: center;
+}
+
+.interactive h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.interactive .comments {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.interactive .comments h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.interactive .comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.interactive .comments button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.interactive .comments button:hover {
+    background-color: #ff8533;
+}
+
+/* 底部功能区样式 */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #ff6600;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #ff6600;
+}
+
+footer .subscribe input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
+footer .subscribe button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer .subscribe button:hover {
+    background-color: #777;
+}
+
+/* 侧边导航栏样式 */
+.side-nav {
+    position: absolute;
+    top: 620px; /* 初始位置在轮播图下方 */
+    right: 10px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav-header {
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 86, 179, 0.8);
+}
+
+.side-nav-header img {
+    width: 100%;
+}
+
+.side-nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav-links li {
+    border-bottom: 1px solid #ccc;
+}
+
+.side-nav-links li:last-child {
+    border-bottom: none;
+}
+
+.side-nav-links li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.side-nav-links li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* 添加在文件末尾 */
+.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* 搜索框样式 */
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px 40px 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #ff6700;
+    box-shadow: 0 0 5px rgba(255, 103, 0, 0.3);
+}
+
+.search-box button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.search-box button:hover {
+    color: #ff6700;
+}
+
+/* 搜索结果框样式 */
+#searchResults {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: none;
+}
+
+#searchResults .result-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#searchResults .result-item:hover {
+    background: #f8f8f8;
+}
+
+#searchResults .result-item:last-child {
+    border-bottom: none;
+}
+
+#searchResults .result-item .title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+#searchResults .result-item .content {
+    color: #666;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+#searchResults .no-results {
+    padding: 15px;
+    color: #999;
+    text-align: center;
+}

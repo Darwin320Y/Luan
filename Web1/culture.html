@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人文风景</title>
+    <link rel="stylesheet" href="culture.css">
+    <script src="culture.js" defer></script>
+</head>
+
+<body>
+    <!-- 顶部导航栏 -->
+    <header>
+        <div class="logo">六安文旅</div>
+        <nav>
+            <ul>
+                <li><a href="main.html">首页</a></li>
+                <li><a href="culture.html">人文风景</a></li>
+                <li><a href="feature.html">地域特色</a></li>
+                <li><a href="food.html">美食推荐</a></li>
+                <li><a href="guide.html">旅游攻略</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索内容..." id="searchInput">
+            <button onclick="performSearch()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="searchResults"></div>
+        </div>
+    </header>
+
+        <!-- 景区分类 -->
+        <section class="categories">
+            <h2>景区分类</h2>
+            <div class="category-list">
+                <button data-category="all">全部</button>
+                <button data-category="5A">5A景区</button>
+                <button data-category="4A">4A景区</button>
+                <button data-category="culture">文博科教</button>
+                <button data-category="heritage">特色景区</button>
+                <button data-category="hongse">红色传承</button>
+            </div>
+        </section>
+    
+        <!-- 景区列表 -->
+        <section class="attractions">
+            <h2>热门景区</h2>
+            <div class="attraction-list">
+                <div class="attraction" data-category="5A">
+                    <h3>天堂寨</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4944851575917437496&sourceFrom=search_a" target="_blank">
+                        <img src="images/tiantangzhai.jpg" alt="天堂寨">
+                    </a>
+                </div>
+                <div class="attraction" data-category="5A">
+                    <h3>万佛湖</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5125780741319191043&sourceFrom=search_a" target="_blank">
+                        <img src="images/wanfohu.jpg" alt="万佛湖">
+                    </a>
+                </div>
+                <div class="attraction" data-category="4A">
+                    <h3>皖西大裂谷</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4314700060328935388&sourceFrom=search_a" target="_blank">
+                        <img src="images/wanxidaliegu.jpg" alt="皖西大裂谷">
+                    </a>
+                </div>
+                <div class="attraction" data-category="4A">
+                    <h3>霍山大峡谷漂流</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_3501220768893038382&sourceFrom=search_a" target="_blank">
+                        <img src="images/huoshan.jpg" alt="霍山大峡谷漂流">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="attractions">
+            <div class="attraction-list">
+                <div class="attraction" data-category="4A">
+                    <h3>大别山彩虹瀑布</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5444338452816264273&sourceFrom=search_a" target="_blank">
+                        <img src="images/dabieshan.jpg" alt="大别山彩虹瀑布">
+                    </a>
+                </div>
+                <div class="attraction" data-category="4A">
+                    <h3>梅山水库风景区</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4781780532425279421&sourceFrom=search_a" target="_blank">
+                        <img src="images/meishan.jpg" alt="梅山水库风景区">
+                    </a>
+                </div>
+                <div class="attraction" data-category="heritage">
+                    <h3>六万情峡</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5082340540068715861&sourceFrom=search_a" target="_blank">
+                        <img src="images/liuwanqingxia.jpg" alt="六万情峡">
+                    </a>
+                </div>
+                <div class="attraction" data-category="4A">
+                    <h3>大别山风情谷</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4996278913172486465&sourceFrom=search_a" target="_blank">
+                        <img src="images/fengqinggu.jpg" alt="大别山风情谷">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="attractions">
+            <div class="attraction-list">
+                <div class="attraction" data-category="culture">
+                    <h3>皖西博物馆</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5083680449592969044&sourceFrom=search_a" target="_blank">
+                        <img src="images/wanxibowuguan.jpg" alt="皖西博物馆">
+                    </a>
+                </div>
+                <div class="attraction" data-category="culture">
+                    <h3>迎驾酒博物馆</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4815742295109670459&sourceFrom=search_a" target="_blank">
+                        <img src="images/yingjia.jpg" alt="迎驾酒博物馆">
+                    </a>
+                </div>
+                <div class="attraction" data-category="culture">
+                    <h3>六安市科技馆</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4279480100056145779&sourceFrom=search_a" target="_blank">
+                        <img src="images/luanshikejiguan.jpg" alt="六安市科技馆">
+                    </a>
+                </div>
+                <div class="attraction" data-category="heritage">
+                    <h3>悠然南山</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_15697160418266132056&sourceFrom=search_a" target="_blank">
+                        <img src="images/yourannanshan.jpg" alt="悠然南山">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="attractions">
+            <div class="attraction-list">
+                <div class="attraction" data-category="hongse">
+                    <h3>大别山革命历史纪念馆</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_3385571666360505773&sourceFrom=search_a" target="_blank">
+                        <img src="images/hongse1.jpg" alt="大别山革命历史纪念馆">
+                    </a>
+                </div>
+                <div class="attraction" data-category="hongse">
+                    <h3>红军烈士墓园</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4631647549898085041&sourceFrom=search_a" target="_blank">
+                        <img src="images/hongse2.jpg" alt="红军烈士墓园">
+                    </a>
+                </div>
+                <div class="attraction" data-category="hongse">
+                    <h3>金寨县革命博物馆</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_6063450609844128920&sourceFrom=search_a" target="_blank">
+                        <img src="images/hongse3.jpg" alt="金寨县革命博物馆">
+                    </a>
+                </div>
+                <div class="attraction" data-category="hongse">
+                    <h3>独山革命旧址群</h3>
+                    <a href="https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_4873918816724973482&sourceFrom=search_a" target="_blank">
+                        <img src="images/hongse4.jpg" alt="独山革命旧址群">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
+    
+    <!-- 底部功能区 -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://www.example.com/about">关于我们</a>
+            <a href="https://www.example.com/contact">联系我们</a>
+            <a href="https://www.example.com/privacy">隐私政策</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.weibo.com">微博</a>
+            <a href="https://www.wechat.com">微信</a>
+            <a href="https://www.instagram.com">Instagram</a>
+        </div>
+        <div class="subscribe">
+            <input type="email" placeholder="输入您的邮箱">
+            <button onclick="window.location.href='https://www.example.com/subscribe'">订阅</button>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
