@@ -4,6 +4,25 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    /* 添加背景图 */
+    background-image: url('images/background.jpg');
+    /* 背景图不重复 */
+    background-repeat: no-repeat;
+    /* 背景图固定 */
+    background-attachment: fixed;
+    /* 背景图位置居中 */
+    background-position: center;
+    /* 背景图尺寸覆盖整个容器 */
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
 }
 
 header {
