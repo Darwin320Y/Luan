@@ -110,6 +110,7 @@ main {
     margin-bottom: 15px;
     border: 1px solid #eee;
     border-radius: 6px;
+    loading: lazy;
 }
 
 .qrcode-section p {
@@ -141,6 +142,7 @@ main {
     margin: 0 auto;
     border-radius: 6px;
     border: 1px solid #ddd;
+    loading: lazy;
 }
 
 .text-container {
