@@ -96,6 +96,7 @@ header nav ul li a:hover {
     height: 200px; /* 设置固定高度 */
     object-fit: cover; /* 保持图片比例并填充 */
     border-radius: 5px;
+    loading: lazy;
 }
 
 .attraction h3 {
