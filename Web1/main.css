@@ -55,6 +55,10 @@ header nav ul li a:hover {
     top: 0;
     left: 0;
     border-radius: 10px; /* 图片也需要圆角，以适应容器 */
+    loading: lazy; /* 新增懒加载 */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0); /* 触发GPU加速 */
 }
 
 .hero .slides img.active {
